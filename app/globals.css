@@ -14,9 +14,12 @@ header {
   padding: 0.7rem 1rem;
   color: white;
   display: flex;
-  align-items: end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.5rem;
 }
+
 
 footer {
   color: whitesmoke;
@@ -31,7 +34,7 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  gap: 0.5rem;
+  gap: 1rem;
   color: white;
   padding: 1.5rem;
   justify-content: space-between;
@@ -66,13 +69,12 @@ footer {
 
 .home > h2 {
   color: rgba(0, 0, 0, 0.8);
-  font-size: 3rem;
-  width: 90%;
   margin: auto;
   text-align: center;
   padding: 1rem 0 0;
   color: rgba(225, 225, 225, 0.6);
   text-transform: capitalize;
+  width: 70%;
 }
 
 .home main h3 {
@@ -85,7 +87,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.3);
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  align-self: self-end;
 }
 
 .home .highlights {

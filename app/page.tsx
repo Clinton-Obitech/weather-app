@@ -33,8 +33,8 @@ export default async function Home() {
           </Link>
         </nav>
       </main>
-        <h2>from sunny mornings,<br></br>to unexpected storms,<br></br>
-          our weather app,<br></br>keeps you informed,<br></br>anytime,<br></br>anywhere
+        <h2>from sunny mornings to unexpected storms,
+          our weather app keeps you informed anytime,anywhere.
         </h2>
       <section className="highlights">
         <section>

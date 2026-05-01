@@ -14,10 +14,6 @@ export default function UserLocation() {
         const getUserLocation = async () => {
             try {
                 if (!navigator.onLine) {
-                   setLocation({
-                   region: "not",
-                   country: "found"
-                  })
                    return;
                 }
 
@@ -41,7 +37,11 @@ export default function UserLocation() {
     return (
         <div style={{display: "flex", gap: "0.5rem"}}>
             <i className="fa-solid fa-location-dot"/> 
-            {location.region}, {location.country}
+            {location.region || location.country ? (
+                <div>{location.region}, {location.country}</div>
+            ) : (
+               <div>not found</div>
+            )}
         </div>
     )
 }
