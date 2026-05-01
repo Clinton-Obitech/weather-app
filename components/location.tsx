@@ -17,7 +17,7 @@ export default function UserLocation() {
                    return;
                 }
 
-                const { data } = await axios.get("/api/location")
+                const { data } = await axios.get(`http://ipwho.is/`)
 
                  setLocation({
                    region: data.city,
