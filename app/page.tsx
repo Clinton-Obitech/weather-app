@@ -12,7 +12,7 @@ export default async function Home() {
         src="/weather-bg.png"
         alt="weather background"
         fill
-        style={{objectFit: "cover", objectPosition: 'top'}}
+        style={{objectFit: "cover", objectPosition: 'right'}}
         loading="eager"
         />
         <div className="location">
