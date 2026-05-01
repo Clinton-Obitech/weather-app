@@ -34,7 +34,7 @@ export default async function Home() {
         </nav>
       </main>
         <h2>from sunny mornings to unexpected storms,
-          our weather app keeps you informed anytime,anywhere.
+          our weather app keeps you informed anytime, anywhere.
         </h2>
       <section className="highlights">
         <section>
