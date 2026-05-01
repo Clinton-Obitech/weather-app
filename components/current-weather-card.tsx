@@ -124,9 +124,14 @@ export default function CurrentWeatherCard() {
             </section>
 
             <section className="second">
-                <span className="emoji">{weather?.emoji}</span>
-                <h3>{Math.round(temp)}°C {getFeelsLike(temp)}</h3>
-                <h3 className="label">{weather?.label}</h3>
+                <div className="weather">
+                    <span className="emoji">{weather?.emoji}</span>
+                    <h3 className="label">{weather?.label}</h3>
+                </div>
+                <div>
+                    <span>{Math.round(temp)}°C</span>
+                    <h3>{getFeelsLike(temp)}</h3>
+                </div>
             </section>
 
             <section className="third">

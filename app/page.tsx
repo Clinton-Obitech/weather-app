@@ -22,9 +22,6 @@ export default async function Home() {
         <h3>get real time updates, accurate forecasts, 
           and everything you need to plan your day with confidence.
         </h3>
-        <h4>from sunny mornings to unexpected storms, 
-          our weather app keeps you informed anytime, anywhere
-        </h4>
         <nav>
           <Link href="/dashboard" style={{backgroundColor: "navy", color: "white"}}>
           <i className="fa-solid fa-cloud"></i>
@@ -36,7 +33,9 @@ export default async function Home() {
           </Link>
         </nav>
       </main>
-
+        <h2>from sunny mornings,<br></br>to unexpected storms,<br></br>
+          our weather app,<br></br>keeps you informed,<br></br>anytime,<br></br>anywhere
+        </h2>
       <section className="highlights">
         <section>
           <span style={{backgroundColor: "blue"}}><i className="fa-solid fa-temperature-empty"></i></span>

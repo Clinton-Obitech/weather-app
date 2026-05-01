@@ -25,7 +25,6 @@ footer {
 }
 
 .home main {
-  height: 60vh;
   width: 100%;
   position: relative;
   display: flex;
@@ -38,6 +37,10 @@ footer {
   justify-content: space-between;
 }
 
+.home h1 {
+  text-shadow: 1px 1px black;
+}
+
 .home main h1, h4, h3, nav, .location {
   z-index: 4;
   text-transform: capitalize;
@@ -46,39 +49,47 @@ footer {
 .home main nav {
   margin-top: 1rem;
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
 }
 
 .home main nav a {
-  padding: 0.7rem 1rem;
+  padding: 0.8rem 2rem;
   border-radius: 5px;
   text-decoration: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
-.home main h4 {
+.home > h2 {
   color: rgba(0, 0, 0, 0.8);
-  width: 70%;
+  font-size: 3rem;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 1rem 0 0;
+  color: rgba(225, 225, 225, 0.6);
+  text-transform: capitalize;
 }
 
 .home main h3 {
   width: 70%;
+  border-radius: 5px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .home main .location {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  display: flex;
-  gap: 0.4rem;
+  align-self: self-end;
 }
 
 .home .highlights {
-  padding: 1.5rem 2rem 1rem;
+  padding: 1.5rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;

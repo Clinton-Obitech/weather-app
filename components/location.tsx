@@ -14,18 +14,22 @@ export default function UserLocation() {
         const getUserLocation = async () => {
             try {
                 if (!navigator.onLine) {
-                setLocation({
-                region: "not",
-                country: "found"
-               })
-               return;
-            }
-            
-            const { data } = await axios.get("/api/location");
-                setLocation({
-                region: data.region,
-                country: data.country
-            })
+                   setLocation({
+                   region: "not",
+                   country: "found"
+                  })
+                   return;
+                }
+
+                const { data } = await axios.get("/api/location")
+
+                 setLocation({
+                   region: data.city,
+                   country: data.country
+                })
+
+                    
+
             } catch (err) {
                 console.error(err)
             }
@@ -35,10 +39,7 @@ export default function UserLocation() {
 
 
     return (
-        <div style={{
-            display: "flex",
-            gap: "0.5rem"
-        }}>
+        <div style={{display: "flex", gap: "0.5rem"}}>
             <i className="fa-solid fa-location-dot"/> 
             {location.region}, {location.country}
         </div>
