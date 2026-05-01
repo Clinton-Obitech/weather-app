@@ -1,26 +1,144 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: lighter;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+header {
+  padding: 0.7rem 1rem;
+  color: white;
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+footer {
+  color: whitesmoke;
+  padding: 1rem;
+  text-align: right;
+}
+
+.home main {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.5rem;
+  color: white;
+  padding: 1.5rem;
+  justify-content: space-between;
+}
+
+.home main h1, h4, h3, nav, .location {
+  z-index: 4;
+  text-transform: capitalize;
+}
+
+.home main nav {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.home main nav a {
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.home main h4 {
+  color: rgba(0, 0, 0, 0.8);
+  width: 70%;
+}
+
+.home main h3 {
+  width: 70%;
+}
+
+.home main .location {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.home .highlights {
+  padding: 1.5rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.home .highlights section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: center;
+  text-align: center;
+  background-color: rgba(225, 255, 255, 0.3);
+  padding: 2rem 1rem;
+  border-radius: 15px;
+  text-transform: capitalize;
+}
+
+.home .highlights section h3 {
+  padding: 0 2rem;
+}
+
+.home .highlights span {
+  font-size: 2rem;
+  color: white;
+  align-self: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.home .notification section {
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1rem;
+  color: white;
+  padding: 1.5rem;
+  justify-content: space-around;
+}
+
+.home .notification {
+  padding: 1rem;
+}
+
+.notification h2, h4, a {
+  z-index: 10;
+  text-transform: capitalize;
+}
+
+.notification h4 {
+  width: 50%;
+}
+
+.notification a {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  color: navy;
 }

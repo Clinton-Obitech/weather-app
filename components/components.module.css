@@ -1,0 +1,10 @@
+.message {
+    background-color: rgba(225, 225, 225, 0.2);
+    padding: 4rem;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 5px;
+}

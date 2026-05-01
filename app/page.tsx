@@ -1,65 +1,73 @@
+import Link from "next/link";
 import Image from "next/image";
+import axios from "axios";
+import UserLocation from "@/components/location";
 
-export default function Home() {
+export default async function Home() {
+  
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="home">
+      <main className="relative w-full h-[500px]">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+        src="/weather-bg.png"
+        alt="weather background"
+        fill
+        style={{objectFit: "cover", objectPosition: 'top'}}
+        loading="eager"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className="location">
+        <UserLocation />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <h1>stay ahead<br></br>of the weather</h1>
+        <h3>get real time updates, accurate forecasts, 
+          and everything you need to plan your day with confidence.
+        </h3>
+        <h4>from sunny mornings to unexpected storms, 
+          our weather app keeps you informed anytime, anywhere
+        </h4>
+        <nav>
+          <Link href="/dashboard" style={{backgroundColor: "navy", color: "white"}}>
+          <i className="fa-solid fa-cloud"></i>
+          check weather
+          </Link>
+          <Link href="/forecast" style={{backgroundColor: "whitesmoke", color: "black"}}>
+          <i className="fa-solid fa-calendar"></i>
+          view forecast
+          </Link>
+        </nav>
       </main>
+
+      <section className="highlights">
+        <section>
+          <span style={{backgroundColor: "blue"}}><i className="fa-solid fa-temperature-empty"></i></span>
+          <h2>real-time condition</h2>
+          <h3>see current temperature, humidity, wind speed, and more at a glance.</h3>
+        </section>
+        <section>
+          <span style={{backgroundColor: "green"}}><i className="fa-solid fa-calendar"></i></span>
+          <h2>accurate forecast</h2>
+          <h3>hourly and 7-days forecasts powered by reliable data to help you plan better.</h3>
+        </section>
+        <section>
+          <span style={{backgroundColor: "purple"}}><i className="fa-solid fa-location-dot"></i></span>
+          <h2>location-based updates</h2>
+          <h3>automatically detect your location and get instant weather updates wherever you are.</h3>
+        </section>
+      </section>
+
+      <div className="notification">
+      <section>
+        <Image
+        src="/notification-bg.png"
+        alt="notification background"
+        fill
+        style={{objectFit: "cover", objectPosition: 'top', borderRadius: "3px"}}
+        />
+        <h2>be prepared,<br></br>everyday</h2>
+        <h4>don't let the weather catch you off guard.<br></br>stay informed and stay ready.</h4>
+        <a href="">enable alerts</a>
+      </section>
+      </div>
     </div>
   );
 }
